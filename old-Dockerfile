@@ -1,0 +1,6 @@
+FROM eclipse-temurin:21-jre
+WORKDIR /app
+COPY target/java-devops-app-1.0.0.jar app.jar
+ENV APP_ENV=development
+
+ENTRYPOINT ["java", "-jar", "app.jar"]
